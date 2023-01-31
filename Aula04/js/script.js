@@ -117,4 +117,16 @@ const saida2 = `<h2> ${produtos[1].nome} </h2>
 
 document.getElementById("produto2").innerHTML = saida2;
 
+//********************************************************************* */
 
+// estrutura simples de repetição
+
+for(let i = 1; i<=10; i++){
+
+    console.log(i);
+}
+
+for(let bt = 1; bt<=10; bt++){
+
+    document.getElementById("caixa").innerHTML += ` <button> Botão ${bt}</button>`;
+} 
