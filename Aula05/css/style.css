@@ -1,0 +1,61 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header{
+
+    padding: 50px 0px;
+    border-bottom: 1px solid silver;    
+}
+
+h1{
+
+    font-weight: arial;
+    text-align: center;
+}
+
+#formulario{
+
+    width: 50vw;
+    margin: 50px auto;
+    padding: 10px;
+    background-color: silver;
+   
+}
+
+#formulario input[type=text], #formulario select{
+
+    padding: 20px;
+    font-size: 15pt;
+    font-weight: lighter;
+    width: 95%;
+    margin: 10px auto;
+    display: block;
+    border: 0;
+}
+
+#formproduto{
+
+    margin: auto;
+    padding: 50px;
+    
+    
+}
+
+#formproduto select{
+    padding: 30px;
+    width: 95%;
+}
+
+#rsprod{
+    width: 30vw;
+    padding: 50px;
+    border: 1px dotted #ccc;
+}
+
+#rsprod h2{
+
+    text-align: center;  
+}
