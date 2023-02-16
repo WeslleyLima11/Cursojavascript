@@ -46,6 +46,8 @@ window.document.body.onload = function(){
     // console.log( Math.round (1+Math.random()*254));
 
     window.document.body.innerHTML = paletaCores(50,30);
+    
+   
 
 
     
