@@ -1,0 +1,86 @@
+html{
+
+    scroll-behavior: smooth; /* desliza até o local*/
+}
+
+*{
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+nav{
+
+    background-color: black;
+    padding: 50px 10px 0px 20px; /* topo, direita,base,esqueda*/
+    height: 100vh;
+    width: 200px;
+    position:fixed;
+    top: 0;
+    left: -200px; /* menu dentro da tela*/
+    transition: ease 0.5s;
+}
+
+nav ul{
+    list-style: none;
+}
+
+nav ul li{
+   
+    margin-bottom: 10px;
+    padding: 5px;
+}
+
+nav ul li a{
+    font-family: arial;
+    font-size: 15pt;
+    color: white;
+    text-decoration: none;
+}
+
+nav ul li a:hover{
+
+    background-color: rgba(200,200,200,0.3);
+}
+
+#af{
+
+    color: white;
+    background-color: red;
+    padding: 10px;
+    text-decoration: none;
+    font-size: 15pt;
+    position: absolute;
+    left: 200px;
+    top: 0;
+}
+
+section{
+
+    margin: 100px 50px;
+    text-align: justify;
+    line-height: 20px;
+}
+
+#conteudo{
+
+    opacity: 0;
+    transition: ease 1s;
+}
+
+#carregando{
+
+    position: fixed;
+    z-index: 10000; /* permite que vc mova o elemento para qualquer  altura*/
+    width: 100vw;
+    height: 100vh;
+    text-align: center;
+    padding-top: 15%;
+    background-color: white;
+    opacity: 1;
+    transition: ease 0.5s;
+    top: 0;
+    left: 0;
+
+}
