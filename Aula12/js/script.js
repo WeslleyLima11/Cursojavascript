@@ -24,10 +24,13 @@ function carregar(pagina){
     .then((resultado) =>{
         console.log(resultado.results);
         
+       document.querySelector("#conteudo").innerHTML = "";
+       
         resultado.results.map((filme,index)=>{
             
             var caixa = document.createElement("div");
             caixa.setAttribute("class","caixa");
+            caixa.setAttribute("onclick", `modal('${filme.backdrop_path}')`);
             
             var img = document.createElement("img");
             img.setAttribute("src",cm+filme.poster_path);
@@ -51,8 +54,6 @@ function carregar(pagina){
             document.querySelector("#conteudo").appendChild(caixa);
 
             
-
-
         })
     })
     .catch((erro)=>console.error(erro));
@@ -63,6 +64,16 @@ window.document.body.onload = ()=>{
     carregar(1);
 }
 
+let saida = "<nav class=pag><ul>";
+
+for(let i = 1; i <= 20; i++){
+
+    saida += `<li><a href="#" onclick=carregar(${i})>${i}</a></li>`;
+}
+
+saida += "</ul></nav>";
+document.getElementById("paginacao").innerHTML = saida;
+
 /* Função que só é executada depois de algum tempo */
 window.setTimeout(() =>{
 
@@ -71,4 +82,24 @@ window.setTimeout(() =>{
     document.querySelector("#conteudo").style.opacity = "1";
 
 } ,2000);
+
+function modal(imagem){
+
+    fundo.style.opacity = "1";
+    fundo.style.display = "block";
+    
+    setTimeout(()=>{
+
+    exibir.style.marginTop = "10%";
+    document.querySelector("#exibirimagem").innerHTML = `<img src="${cm+imagem}" />`;
+
+},300)
+}
+
+fechar.onclick = ()=>{
+
+    fundo.style.opacity = "0";
+    fundo.style.display = "none";
+    exibir.style.marginTop = "-400px";
+}
 
